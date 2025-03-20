@@ -19,4 +19,10 @@ public class TestController {
     public String add2() {
         return "add gi do 2";
     }
+
+
+    @GetMapping ("/tesst3")
+    public String add3() {
+        return "add gi do 3";
+    }
 }

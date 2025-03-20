@@ -15,8 +15,5 @@ public class TestController {
         return "add gi do";
     }
 
-    @GetMapping ("/tesst2")
-    public String add2() {
-        return "add gi do 2";
-    }
+
 }

@@ -10,14 +10,13 @@ public class TestController {
         return "Em Zy cute vai lon";
     }
 
-    @GetMapping("/tesst")
+    @GetMapping ("/tesst")
     public String add() {
         return "add gi do";
     }
 
-    @GetMapping("/tesst2")
+    @GetMapping ("/tesst2")
     public String add2() {
         return "add gi do 2";
     }
-
 }

@@ -8,10 +8,10 @@ pipeline {
             }
         }
 
-        stage('Build') {
-            steps {
-                sh './gradlew build'
-            }
-        }
+//         stage('Build') {
+//             steps {
+//                 sh './gradlew build'
+//             }
+//         }
     }
 }

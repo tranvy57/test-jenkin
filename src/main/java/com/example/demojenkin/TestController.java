@@ -21,4 +21,8 @@ public class TestController {
     }
 
 
+    @GetMapping ("/tesst3")
+    public String add3() {
+        return "add gi do ";
+    }
 }

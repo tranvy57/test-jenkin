@@ -8,10 +8,11 @@ pipeline {
             }
         }
 
-//         stage('Build') {
-//             steps {
-//                 sh './gradlew build'
-//             }
-//         }
+        stage('Build') {
+                    steps {
+                        sh 'chmod +x ./gradlew'  // Cấp quyền thực thi
+                        sh './gradlew build'
+                    }
+                }
     }
 }

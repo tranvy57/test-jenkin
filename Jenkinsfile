@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "your-dockerhub-username/test-jenkin"
+        IMAGE_NAME = "tranvy57/test-jenkin"
         CONTAINER_NAME = "test-jenkin-container"
     }
 
@@ -28,7 +28,7 @@ pipeline {
 
         stage('Push Image to Docker Hub') {
             steps {
-                withDockerRegistry([credentialsId: 'docker-hub-credentials', url: '']) {
+                withDockerRegistry(credentialsId: 'tranvy57', url: 'https://index.docker.io/v1/')  {
                     sh 'docker push $IMAGE_NAME'
                 }
             }

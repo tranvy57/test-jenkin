@@ -10,10 +10,7 @@ public class TestController {
         return "Em Zy cute vai lon";
     }
 
-    @GetMapping ("/tesst")
-    public String add() {
-        return "add gi do";
-    }
+
 
 
 }

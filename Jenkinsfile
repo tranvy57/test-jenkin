@@ -20,25 +20,25 @@ pipeline {
             }
         }
 
-        stage('Build Docker Image') {
-            steps {
-                sh 'docker build -t $IMAGE_NAME .'
-            }
-        }
-
-        stage('Push Image to Docker Hub') {
-            steps {
-                withDockerRegistry(credentialsId: 'tranvy57', url: 'https://index.docker.io/v1/')  {
-                    sh 'docker push $IMAGE_NAME'
-                }
-            }
-        }
-
-        stage('Deploy with Docker Compose') {
-            steps {
-                sh 'docker-compose down || true'  // Dừng container cũ nếu có
-                sh 'docker-compose up -d --build'
-            }
-        }
+//         stage('Build Docker Image') {
+//             steps {
+//                 sh 'docker build -t $IMAGE_NAME .'
+//             }
+//         }
+//
+//         stage('Push Image to Docker Hub') {
+//             steps {
+//                 withDockerRegistry(credentialsId: 'tranvy57', url: 'https://index.docker.io/v1/')  {
+//                     sh 'docker push $IMAGE_NAME'
+//                 }
+//             }
+//         }
+//
+//         stage('Deploy with Docker Compose') {
+//             steps {
+//                 sh 'docker-compose down || true'  // Dừng container cũ nếu có
+//                 sh 'docker-compose up -d --build'
+//             }
+//         }
     }
 }
